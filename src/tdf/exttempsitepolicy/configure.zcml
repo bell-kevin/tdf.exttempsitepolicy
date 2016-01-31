@@ -14,7 +14,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="tdf.exttempsitepolicy"
+      title="LibreOffice-Extensions-Templates-Site Policy"
       directory="profiles/default"
       description="Installs the tdf.exttempsitepolicy add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
