@@ -2,5 +2,7 @@
 <metadata>
   <version>1000</version>
   <dependencies>
+    <dependency>profile-tdf.extensionuploadcenter:default</dependency>
+    <dependency>profile-tdf.templateuploadcenter:default</dependency>
   </dependencies>
 </metadata>
