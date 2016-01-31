@@ -20,7 +20,7 @@ long_description = (
 setup(
     name='tdf.exttempsitepolicy',
     version='1.0a1',
-    description="A policy add-on Plone package for the new LibreOffice extensions and templates site",
+    description="LibreOffice-Extension-Templates-Website-Policy",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -46,6 +46,8 @@ setup(
         'plone.api',
         'setuptools',
         'z3c.jbot',
+        'tdf.extensionuploadcenter',
+        'tdf.templateuploadcenter',
     ],
     extras_require={
         'test': [
