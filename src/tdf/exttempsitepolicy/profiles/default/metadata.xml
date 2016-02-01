@@ -4,5 +4,6 @@
   <dependencies>
     <dependency>profile-tdf.extensionuploadcenter:default</dependency>
     <dependency>profile-tdf.templateuploadcenter:default</dependency>
+    <dependency>profile-cioppino.twothumbs:default</dependency>
   </dependencies>
 </metadata>
