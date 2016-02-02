@@ -11,7 +11,7 @@ This Plone add-on contains the site policy for the new LibreOffice extensions an
 Features
 --------
 
-- 
+-
 
 
 Examples
@@ -32,7 +32,7 @@ Translations
 
 This product has been translated into
 
-- 
+-
 
 
 Installation
@@ -54,8 +54,8 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/tdf.exttempsitepolicy/issues
-- Source Code: https://github.com/collective/tdf.exttempsitepolicy
+- Issue Tracker: https://github.com/tdf/tdf.exttempsitepolicy/issues
+- Source Code: https://github.com/tdf/tdf.exttempsitepolicy
 - Documentation: inside the docs folder of the add-on
 
 
