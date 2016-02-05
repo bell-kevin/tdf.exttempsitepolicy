@@ -48,6 +48,7 @@ setup(
         'z3c.jbot',
         'tdf.extensionuploadcenter',
         'tdf.templateuploadcenter',
+        'cioppino.twothumbs',
     ],
     extras_require={
         'test': [
