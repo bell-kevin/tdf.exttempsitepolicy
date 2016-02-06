@@ -49,6 +49,7 @@ setup(
         'tdf.extensionuploadcenter',
         'tdf.templateuploadcenter',
         'cioppino.twothumbs',
+        'collective.ATClamAV',
     ],
     extras_require={
         'test': [
