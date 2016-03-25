@@ -17,4 +17,14 @@
       directory="static"
       />
 
+  <!-- Frontpage -->
+  <browser:page
+       name="frontpageview"
+       for="*"
+       layer="..interfaces.ITdfExttempsitepolicyLayer"
+       class=".frontpage.frontpageView"
+       template="templates/frontpageview.pt"
+       permission="zope2.View"
+       />
+
 </configure>
