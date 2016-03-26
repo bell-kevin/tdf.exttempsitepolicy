@@ -9,4 +9,4 @@ class frontpageView(BrowserView):
 
     """ The view of the LibreOffice extensions and templates frontpage
     """
-    index = ViewPageTemplateFile("templates/frontpageview.pt")
+
