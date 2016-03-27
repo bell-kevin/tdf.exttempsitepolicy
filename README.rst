@@ -11,7 +11,16 @@ This Plone add-on contains the site policy for the new LibreOffice extensions an
 Features
 --------
 
--
+- Install and activate the Plone add-ons that are used to drive the LibreOffice extensions and template site:
+
+  - plone.api
+  - tdf.extensionuploadcenter
+  - tdf.templateuploadcenter
+  - cioppino.twothumbs
+  - collective.ATClamAV
+  - tdf.extensioncentertheme
+
+- Set title and description of the site.
 
 
 Examples
@@ -32,7 +41,7 @@ Translations
 
 This product has been translated into
 
--
+- currently no translation
 
 
 Installation
