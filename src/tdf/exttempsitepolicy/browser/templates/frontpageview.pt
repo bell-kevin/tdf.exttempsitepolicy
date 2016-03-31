@@ -37,6 +37,16 @@
         <a class="external-link" href="http://www.gnu.org/philosophy/free-sw.html">free software licenses</a>.
      </p>
 
+    <p class="current-projects" i18n:translate="">Currently there are
+                            <span tal:content="view/tupproject_count" i18n:name="tup_project_count" /> LibreOffice template project(s) with
+                            <span tal:content="view/tuprelease_count" /> release(s) available.
+                    </p>
+
+
+    <p class="current-projects" i18n:translate="">Currently there are
+                            <span tal:content="view/eupproject_count" i18n:name="eup_project_count" /> LibreOffice extension project(s) with
+                            <span tal:content="view/euprelease_count" /> release(s) available.
+                    </p>
 
 
 </metal:main>
