@@ -33,6 +33,22 @@ class frontpageView(BrowserView):
 
 
 
+    def get_newest_templateprojects(self):
+        self.catalog = api.portal.get_tool(name='portal_catalog')
+        sort_on = 'created'
+        contentFilter = {
+                          'sort_on' : sort_on,
+                          'sort_order' : 'reverse',
+                          'review_state': 'published',
+                          'portal_type':'tdf.templateuploadcenter.tupproject'}
+
+        results = self.catalog(**contentFilter)
+
+        return results
+
+
+
+
 
     def eupproject_count(self):
         """Return number of projects
