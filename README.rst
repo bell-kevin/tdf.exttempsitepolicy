@@ -21,6 +21,7 @@ Features
   - tdf.extensioncentertheme
 
 - Set title and description of the site.
+- New front-page with dynamic content and internationalisation
 
 
 Examples
