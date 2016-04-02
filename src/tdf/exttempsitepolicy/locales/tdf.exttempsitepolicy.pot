@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-04-01 18:59+0000\n"
+"POT-Creation-Date: 2016-04-02 08:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "description_extensions"
 msgstr ""
 
-#. Default: "LibreOffice offers a wide variety of features, and when you look for additional functionality, there may well be extensions and templates that add that! This site offers a wide range of extensions and templates to satisfy your needs. What's more, people, maybe you, can develop more extensions and offer them for the collecting on this site."
+#. Default: "LibreOffice offers a wide variety of features, and when you look for additional functionality, there may well be extensions and templates that add that! This site offers a wide range of extensions and templates to satisfy your needs. What's more, people, maybe you, can develop more extensions or templates and offer them for the collecting on this site."
 #: ./browser/templates/frontpageview.pt:14
 msgid "description_extensions_templates"
 msgstr ""
