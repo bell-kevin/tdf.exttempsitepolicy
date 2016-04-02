@@ -37,12 +37,50 @@
         <a class="external-link" href="http://www.gnu.org/philosophy/free-sw.html">free software licenses</a>.
      </p>
 
+    <div id="extension_projects">
+        <h2 i18n:translate="title_extensions">Extensions</h2>
+        <p class="current-projects" i18n:translate="">Currently there are
+                            <span tal:content="view/eupproject_count" i18n:name="eup_project_count" /> LibreOffice extension project(s) with
+                            <span tal:content="view/euprelease_count" /> release(s) available.
+                    </p>
+        <h3 i18n:translate="title_most_recent_extension_projects">Most Recent Extension Projects</h3>
+        <div class=""
+                            tal:define="results python:view.get_newest_extensionprojects();
+                                        Batch python:modules['Products.CMFPlone'].Batch;
+				                        b_size python:5;b_start python:0;b_start request/b_start | b_start;
+				                        ">
+                        <tal:results condition="results"
+                                     define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
+                            <ul class="newestproducts">
+                                <li tal:repeat="result batch">
+                                    <tal:entry
+						                define="project result/getObject;
+						                        url result/getURL;
+							                    projectURL project/absolute_url;
+							                    result_type result/portal_type;
+							                    zoomid   python:project.id.replace('.', '_');
+							                    screenshot   project/getScreenshot | nothing">
+
+                                        <h4 style="border-top: none">
+                                            <a href="" tal:attributes="href projectURL;" 	tal:content="project/pretty_title_or_id">
+                                                <tal:comment replace="nothing">Extension One</tal:comment></a>
+                                        </h4>
+                                    </tal:entry>
+                                </li>
+                            </ul>
+                        </tal:results>
+                    </div>
+
+    </div>
+
+
     <div id="template_projects">
         <h2 i18n:translate="title_templates">Templates</h2>
         <p class="current-projects" i18n:translate="">Currently there are
                             <span tal:content="view/tupproject_count" i18n:name="tup_project_count" /> LibreOffice template project(s) with
                             <span tal:content="view/tuprelease_count" /> release(s) available.
                     </p>
+        <h3 i18n:translate="title_most_recent_template_projects">Most Recent Template Projects</h3>
         <div class=""
                             tal:define="results python:view.get_newest_templateprojects();
                                         Batch python:modules['Products.CMFPlone'].Batch;
@@ -70,16 +108,6 @@
                         </tal:results>
                     </div>
     </div>
-
-    <div id="extension_projects">
-        <h2 i18n:translate="title_extensions">Extensions</h2>
-        <p class="current-projects" i18n:translate="">Currently there are
-                            <span tal:content="view/eupproject_count" i18n:name="eup_project_count" /> LibreOffice extension project(s) with
-                            <span tal:content="view/euprelease_count" /> release(s) available.
-                    </p>
-
-    </div>
-
 
 
 

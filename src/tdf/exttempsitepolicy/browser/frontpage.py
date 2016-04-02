@@ -56,7 +56,7 @@ class frontpageView(BrowserView):
         context = aq_inner(self.context)
         catalog = api.portal.get_tool(name='portal_catalog')
 
-        return len(catalog(portal_type='tdf.extensionuploadcenter.tupproject'))
+        return len(catalog(portal_type='tdf.extensionuploadcenter.eupproject'))
 
 
 
@@ -66,6 +66,19 @@ class frontpageView(BrowserView):
         context = aq_inner(self.context)
         catalog = api.portal.get_tool(name='portal_catalog')
 
-        return len(catalog(portal_type='tdf.extensionuploadcenter.tuprelease'))
+        return len(catalog(portal_type='tdf.extensionuploadcenter.euprelease'))
 
 
+
+    def get_newest_extensionprojects(self):
+        self.catalog = api.portal.get_tool(name='portal_catalog')
+        sort_on = 'created'
+        contentFilter = {
+                          'sort_on' : sort_on,
+                          'sort_order' : 'reverse',
+                          'review_state': 'published',
+                          'portal_type':'tdf.extensionuploadcenter.eupproject'}
+
+        results = self.catalog(**contentFilter)
+
+        return results
