@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-04-02 08:15+0000\n"
+"POT-Creation-Date: 2016-04-02 08:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tdf.exttempsitepolicy\n"
 
-#: ./browser/templates/frontpageview.pt:44
+#: ./browser/templates/frontpageview.pt:29
 msgid "Currently there are ${eup_project_count} LibreOffice extension project(s) with <span>${DYNAMIC_CONTENT}</span> release(s) available."
 msgstr ""
 
-#: ./browser/templates/frontpageview.pt:81
+#: ./browser/templates/frontpageview.pt:73
 msgid "Currently there are ${tup_project_count} LibreOffice template project(s) with <span>${DYNAMIC_CONTENT}</span> release(s) available."
 msgstr ""
 
@@ -48,12 +48,12 @@ msgid "description_extensions_templates"
 msgstr ""
 
 #. Default: "LibreOffice remains committed to providing users with quality software authored under <a class=\"external-link\" href=\"http://www.gnu.org/philosophy/free-sw.html\">free software licenses</a>, and, as such, our catalogue of extensions and templates are published under <a class=\"external-link\" href=\"http://www.gnu.org/philosophy/free-sw.html\">free software licenses</a>."
-#: ./browser/templates/frontpageview.pt:34
+#: ./browser/templates/frontpageview.pt:105
 msgid "description_publish_free_software_license"
 msgstr ""
 
 #. Default: "LibreOffice Templates offer you a way to avoid duplicating repetitive actions when creating new text documents, spreadsheets, or presentations. They also offer a way to maintain consistency of document layout and standard content, and may, for example, be used to maintain consistent branding elements when used in a work place."
-#: ./browser/templates/frontpageview.pt:29
+#: ./browser/templates/frontpageview.pt:63
 msgid "description_templates"
 msgstr ""
 
@@ -71,17 +71,22 @@ msgstr ""
 msgid "title_libreoffice_extensions_and_templates"
 msgstr ""
 
+#. Default: "Licenses"
+#: ./browser/templates/frontpageview.pt:104
+msgid "title_licenses"
+msgstr ""
+
 #. Default: "Most Recent Extension Projects"
-#: ./browser/templates/frontpageview.pt:46
+#: ./browser/templates/frontpageview.pt:31
 msgid "title_most_recent_extension_projects"
 msgstr ""
 
 #. Default: "Most Recent Template Projects"
-#: ./browser/templates/frontpageview.pt:83
+#: ./browser/templates/frontpageview.pt:75
 msgid "title_most_recent_template_projects"
 msgstr ""
 
 #. Default: "Templates"
-#: ./browser/templates/frontpageview.pt:28
+#: ./browser/templates/frontpageview.pt:62
 msgid "title_templates"
 msgstr ""
