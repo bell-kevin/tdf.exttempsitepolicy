@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-03-30 15:59+0000\n"
+"POT-Creation-Date: 2016-04-01 18:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tdf.exttempsitepolicy\n"
+
+#: ./browser/templates/frontpageview.pt:44
+msgid "Currently there are ${eup_project_count} LibreOffice extension project(s) with <span>${DYNAMIC_CONTENT}</span> release(s) available."
+msgstr ""
+
+#: ./browser/templates/frontpageview.pt:81
+msgid "Currently there are ${tup_project_count} LibreOffice template project(s) with <span>${DYNAMIC_CONTENT}</span> release(s) available."
+msgstr ""
 
 #: ./configure.zcml:21
 msgid "Installs the tdf.exttempsitepolicy add-on."
@@ -61,6 +69,16 @@ msgstr ""
 #. Default: "LibreOffice Extensions and Templates"
 #: ./browser/templates/frontpageview.pt:12
 msgid "title_libreoffice_extensions_and_templates"
+msgstr ""
+
+#. Default: "Most Recent Extension Projects"
+#: ./browser/templates/frontpageview.pt:46
+msgid "title_most_recent_extension_projects"
+msgstr ""
+
+#. Default: "Most Recent Template Projects"
+#: ./browser/templates/frontpageview.pt:83
+msgid "title_most_recent_template_projects"
 msgstr ""
 
 #. Default: "Templates"
