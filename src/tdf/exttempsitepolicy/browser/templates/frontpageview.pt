@@ -36,7 +36,7 @@
 				                        ">
                         <tal:results condition="results"
                                      define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
-                            <ul class="newestproducts">
+                            <ul class="newestextensionprojects">
                                 <li tal:repeat="result batch">
                                     <tal:entry
 						                define="project result/getObject;
@@ -50,6 +50,32 @@
                                             <a href="" tal:attributes="href projectURL;" 	tal:content="project/pretty_title_or_id">
                                                 <tal:comment replace="nothing">Extension One</tal:comment></a>
                                         </h4>
+                                        <div tal:content="structure project/@@rate-if-you-dare" />
+                                        <div class="project-thumb thumbzoom" tal:condition="screenshot">
+                                                 <a tal:attributes="href projectURL">
+                                                     <img tal:condition="screenshot"
+                                                             tal:replace="structure project/@@images/screenshot/thumb" />
+                                                 </a>
+                                             </div>
+                                             <span class="project-thumb" tal:condition="not:screenshot">
+                                                 <img tal:condition="project/project_logo|nothing"
+                                                         tal:define="scales project/@@images;
+                                                                 projectlogo project/@@images/project_logo;
+                                                                         scale python:scales.scale('project_logo', 'tile')"
+                                                         tal:replace="structure python:scale and scale.tag(css_class='tupcenterprojectlogo') or None" />
+                                             </span>
+                                        <div class="product-details">
+                                                 <span class="product-leadin">
+
+                                                     <span i18n:translate="">in</span>
+                                                     <span tal:replace="python:', '.join(result.getObject().category_choice)"></span>
+                                           </span>
+                                                 <p class="product-description"
+                                                         tal:content="structure project/description">
+                                                     <tal:comment replace="nothing">Extension Project Description.</tal:comment>
+                                                 </p>
+                                           </div>
+                                             <div class="visualClear" ></div>
                                     </tal:entry>
                                 </li>
                             </ul>
