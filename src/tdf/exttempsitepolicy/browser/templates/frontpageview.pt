@@ -57,6 +57,37 @@
                     </div>
 
     </div>
+    <div id="latest_extension_releases">
+        <h3 i18n:translate="title_latest_extension_releases">Most Recent Extension Releases</h3>
+        <div class=""
+                            tal:define="results python:view.get_latest_extension_releases();
+                                        Batch python:modules['Products.CMFPlone'].Batch;
+				                        b_size python:5;b_start python:0;b_start request/b_start | b_start;
+				                        ">
+                        <tal:results condition="results"
+                                     define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
+                            <ul class="latestextensionreleases">
+                                <li tal:repeat="result batch">
+                                    <tal:entry
+						                define="release result/getObject;
+						                        url result/getURL;
+							                    releaseURL release/absolute_url;
+							                    result_type result/portal_type;
+							                    zoomid   python:release.id.replace('.', '_');
+							                    screenshot   release/getScreenshot | nothing">
+
+                                        <h4 style="border-top: none">
+                                            <a href="" tal:attributes="href releaseURL;" 	tal:content="release/pretty_title_or_id">
+                                                <tal:comment replace="nothing">Extension Release One</tal:comment></a>
+                                        </h4>
+                                    </tal:entry>
+                                </li>
+                            </ul>
+                        </tal:results>
+                    </div>
+
+
+    </div>
 
 
     <h2 i18n:translate="title_templates">Templates</h2>

@@ -82,3 +82,16 @@ class frontpageView(BrowserView):
         results = self.catalog(**contentFilter)
 
         return results
+
+
+    def get_latest_extension_releases(self):
+        self.catalog =api.portal.get_tool(name='portal_catalog')
+        sort_on = 'created'
+        contentFilter = {'sort_on' : sort_on,
+                         'sort_order' : 'reverse',
+                         'review_state' : 'final',
+                         'portal_type' : ('tdf.extensionuploadcenter.euprelease', 'tdf.extensionuploadcenter.eupreleaselink' ),
+                         }
+
+        results = self.catalog(**contentFilter)
+        return results
