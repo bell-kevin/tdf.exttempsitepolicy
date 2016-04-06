@@ -182,7 +182,7 @@
                                            </span>
                                                  <p class="product-description"
                                                          tal:content="structure project/description">
-                                                     <tal:comment replace="nothing">Extension Project Description.</tal:comment>
+                                                     <tal:comment replace="nothing">Template Project Description.</tal:comment>
                                                  </p>
                                            </div>
                                              <div class="visualClear" ></div>
@@ -192,6 +192,37 @@
                         </tal:results>
                     </div>
     </div>
+        <div id="latest_template_releases">
+        <h3 i18n:translate="title_latest_template_releases">Most Recent Template Releases</h3>
+        <div class=""
+                            tal:define="results python:view.get_latest_template_releases();
+                                        Batch python:modules['Products.CMFPlone'].Batch;
+				                        b_size python:5;b_start python:0;b_start request/b_start | b_start;
+				                        ">
+                        <tal:results condition="results"
+                                     define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
+                            <ul class="latesttemplatereleases">
+                                <li tal:repeat="result batch">
+                                    <tal:entry
+						                define="release result/getObject;
+						                        url result/getURL;
+							                    releaseURL release/absolute_url;
+							                    result_type result/portal_type;
+							                    zoomid   python:release.id.replace('.', '_');">
+
+                                        <h4 style="border-top: none">
+                                            <a href="" tal:attributes="href releaseURL;" 	tal:content="release/pretty_title_or_id">
+                                                <tal:comment replace="nothing">Template Release One</tal:comment></a>
+                                        </h4>
+                                    </tal:entry>
+                                </li>
+                            </ul>
+                        </tal:results>
+                    </div>
+
+
+    </div>
+
 
 <h2 i18n:translate="title_licenses">Licenses</h2>
         <p i18n:translate="description_publish_free_software_license">LibreOffice remains committed to providing users with quality software authored under
