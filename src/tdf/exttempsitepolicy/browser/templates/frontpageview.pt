@@ -214,6 +214,13 @@
                                             <a href="" tal:attributes="href releaseURL;" 	tal:content="release/pretty_title_or_id">
                                                 <tal:comment replace="nothing">Template Release One</tal:comment></a>
                                         </h4>
+                                        <p><b>Release Summary</b><br />
+                                        <span tal:content="structure release/description">Description</span></p>
+                                        <b>Compatibility</b>
+                                        <p> <tal:loop repeat="compatibility_choice release/compatibility_choice">
+                                                 <span tal:content="compatibility_choice"  />,
+                                            </tal:loop>
+                                        </p>
                                     </tal:entry>
                                 </li>
                             </ul>
