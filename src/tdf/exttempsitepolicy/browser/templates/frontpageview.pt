@@ -9,7 +9,9 @@
 
 <body>
 <metal:main fill-slot="main"
-             tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
+             tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                         cropText nocall:context/@@plone/cropText;">
+
     <h1 i18n:translate="title_libreoffice_extensions_and_templates">LibreOffice Extensions and Templates</h1>
 
     <div class="documentDescription description" i18n:translate="description_extensions_templates">
@@ -19,12 +21,12 @@
         more extensions or templates and offer them for the collecting on this site.
     </div>
 
+ <div id="extension_projects">
     <h2 i18n:translate="title_extensions">Extensions</h2>
     <p i18n:translate="description_extensions">LibreOffice Extensions are tools that can be added or removed independently from your
         installation of the main program. Extensions may add new functionality to your copy
         of LibreOffice, or may make existing functionality easier to use.
     </p>
-    <div id="extension_projects">
         <p class="current-projects" i18n:translate="">Currently there are
                             <span tal:content="view/eupproject_count" i18n:name="eup_project_count" /> LibreOffice extension project(s) with
                             <span tal:content="view/euprelease_count" /> release(s) available.
@@ -52,7 +54,7 @@
                                                 <tal:comment replace="nothing">Extension One</tal:comment></a>
                                         </h4>
                                         <div tal:content="structure project/@@rate-if-you-dare" />
-                                        <div class="project-thumb thumbzoom" tal:condition="screenshot">
+                                        <div class="project-thumb-thumbzoom" tal:condition="screenshot">
                                                  <a tal:attributes="href projectURL">
                                                      <img tal:condition="screenshot"
                                                              tal:replace="structure project/@@images/screenshot/thumb" />
@@ -74,10 +76,10 @@
                                                      <span i18n:translate="">in</span>
                                                      <span tal:replace="python:', '.join(result.getObject().category_choice)"></span>
                                            </span>
-                                                 <p class="product-description"
-                                                         tal:content="structure project/description">
+                                            <p class="product-description"
+                                                         tal:content="python:cropText(project.Description(),200)">
                                                      <tal:comment replace="nothing">Extension Project Description.</tal:comment>
-                                                 </p>
+                                            </p>
                                            </div>
                                              <div class="visualClear" ></div>
                                     </tal:entry>
@@ -85,8 +87,8 @@
                             </ul>
                         </tal:results>
                     </div>
+</div>
 
-    </div>
     <div id="latest_extension_releases">
         <h3 i18n:translate="title_latest_extension_releases">Most Recent Extension Releases</h3>
         <div class=""
@@ -126,7 +128,7 @@
 
     </div>
 
-
+   <div id="template_projects">
     <h2 i18n:translate="title_templates">Templates</h2>
     <p i18n:translate="description_templates">LibreOffice Templates offer you a way to avoid duplicating repetitive actions when creating new
         text documents, spreadsheets, or presentations. They also offer a way to maintain consistency
@@ -135,7 +137,7 @@
     </p>
 
 
-    <div id="template_projects">
+
         <p class="current-projects" i18n:translate="">Currently there are
                             <span tal:content="view/tupproject_count" i18n:name="tup_project_count" /> LibreOffice template project(s) with
                             <span tal:content="view/tuprelease_count" /> release(s) available.
@@ -148,7 +150,7 @@
 				                        ">
                         <tal:results condition="results"
                                      define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
-                            <ul class="newestproducts">
+                            <ul class="newesttemplateprojects">
                                 <li tal:repeat="result batch">
                                     <tal:entry
 						                define="project result/getObject;
@@ -163,7 +165,7 @@
                                                 <tal:comment replace="nothing">Template One</tal:comment></a>
                                         </h4>
                                         <div tal:content="structure project/@@rate-if-you-dare" />
-                                        <div class="project-thumb thumbzoom" tal:condition="screenshot">
+                                        <div class="project-thumb-thumbzoom" tal:condition="screenshot">
                                                  <a tal:attributes="href projectURL">
                                                      <img tal:condition="screenshot"
                                                              tal:replace="structure project/@@images/screenshot/thumb" />
@@ -198,7 +200,8 @@
                             </ul>
                         </tal:results>
                     </div>
-    </div>
+       </div>
+
         <div id="latest_template_releases">
         <h3 i18n:translate="title_latest_template_releases">Most Recent Template Releases</h3>
         <div class=""
@@ -236,7 +239,6 @@
 
 
     </div>
-
 
 <h2 i18n:translate="title_licenses">Licenses</h2>
         <p i18n:translate="description_publish_free_software_license">LibreOffice remains committed to providing users with quality software authored under
