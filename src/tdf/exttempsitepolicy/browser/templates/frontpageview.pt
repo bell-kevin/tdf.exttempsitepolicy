@@ -27,7 +27,7 @@
         installation of the main program. Extensions may add new functionality to your copy
         of LibreOffice, or may make existing functionality easier to use.
     </p>
-        <p class="current-projects" i18n:translate="">Currently there are
+        <p class="current-extensionprojects" i18n:translate="">Currently there are
                             <span tal:content="view/eupproject_count" i18n:name="eup_project_count" /> LibreOffice extension project(s) with
                             <span tal:content="view/euprelease_count" /> release(s) available.
                     </p>
@@ -138,7 +138,7 @@
 
 
 
-        <p class="current-projects" i18n:translate="">Currently there are
+        <p class="current-templateprojects" i18n:translate="">Currently there are
                             <span tal:content="view/tupproject_count" i18n:name="tup_project_count" /> LibreOffice template project(s) with
                             <span tal:content="view/tuprelease_count" /> release(s) available.
                     </p>
